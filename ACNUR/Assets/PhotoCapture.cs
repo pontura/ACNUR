@@ -1,59 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Linq;
+using System.IO;
+using UnityEngine.UI;
 
 
-public class PhotoCapture : MonoBehaviour
+public class PhotoCapture : MonoBehaviour 
 {
-	PhotoCapture photoCaptureObject = null;
-	Texture2D targetTexture = null;
+	public GameObject panel;
 
-	// Use this for initialization
-	void Start()
-	{
-		Resolution cameraResolution = PhotoCapture..SupportedResolutions.OrderByDescending((res) => res.width * res.height).First();
-		targetTexture = new Texture2D(cameraResolution.width, cameraResolution.height);
+	WebCamTexture webCamTexture;
+	public RawImage image; 
 
-		// Create a PhotoCapture object
-		PhotoCapture.CreateAsync(false, delegate(PhotoCapture captureObject) {
-			photoCaptureObject = captureObject;
-			UnityEngine.XR.WSA.WebCam.CameraParameters cameraParameters = new UnityEngine.XR.WSA.WebCam.CameraParameters();
-			cameraParameters.hologramOpacity = 0.0f;
-			cameraParameters.cameraResolutionWidth = cameraResolution.width;
-			cameraParameters.cameraResolutionHeight = cameraResolution.height;
-			cameraParameters.pixelFormat = UnityEngine.XR.WSA.WebCam.CapturePixelFormat.BGRA32;
-
-			// Activate the camera
-			photoCaptureObject.StartPhotoModeAsync(cameraParameters, delegate(UnityEngine.XR.WSA.WebCam.PhotoCapture.PhotoCaptureResult result) {
-				// Take a picture
-				photoCaptureObject.TakePhotoAsync(OnCapturedPhotoToMemory);
-			});
-		});
+	public void Init() {
+		panel.SetActive (true);
+		webCamTexture = new WebCamTexture();
+		webCamTexture.Play();
 	}
 
-	void OnCapturedPhotoToMemory(UnityEngine.XR.WSA.WebCam.PhotoCapture.PhotoCaptureResult result, UnityEngine.XR.WSA.WebCam.PhotoCaptureFrame photoCaptureFrame)
+	void Update()
 	{
-		// Copy the raw image data into our target texture
-		photoCaptureFrame.UploadImageDataToTexture(targetTexture);
-
-		// Create a gameobject that we can apply our texture to
-		GameObject quad = GameObject.CreatePrimitive(PrimitiveType.Quad);
-		Renderer quadRenderer = quad.GetComponent<Renderer>() as Renderer;
-		quadRenderer.material = new Material(Shader.Find("Custom/Unlit/UnlitTexture"));
-
-		quad.transform.parent = this.transform;
-		quad.transform.localPosition = new Vector3(0.0f, 0.0f, 3.0f);
-
-		quadRenderer.material.SetTexture("_MainTex", targetTexture);
-
-		// Deactivate our camera
-		photoCaptureObject.StopPhotoModeAsync(OnStoppedPhotoMode);
+		image.texture = webCamTexture;
 	}
 
-	void OnStoppedPhotoMode(UnityEngine.XR.WSA.WebCam.PhotoCapture.PhotoCaptureResult result)
+	WebCamTexture _CamTex;
+	//private string _SavePath = "C:/WebcamSnaps/";
+
+	public void Done()
 	{
-		// Shutdown our photo capture resource
-		photoCaptureObject.Dispose();
-		photoCaptureObject = null;
+		Data.Instance.photo = new Texture2D(webCamTexture.width, webCamTexture.height);
+		Data.Instance.photo.SetPixels(webCamTexture.GetPixels());
+		Data.Instance.photo.Apply();
+		GetComponent<UI> ().Next ();
+		webCamTexture.Stop();
+		//System.IO.File.WriteAllBytes(_SavePath + _CaptureCounter.ToString() + ".png", snap.EncodeToPNG());
 	}
 }

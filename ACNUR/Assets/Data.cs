@@ -7,6 +7,7 @@ public class Data : MonoBehaviour
 {
     const string PREFAB_PATH = "Data";    
     static Data mInstance = null;
+	public Texture2D photo;
 
     public static Data Instance
     {
@@ -42,5 +43,9 @@ public class Data : MonoBehaviour
        
         DontDestroyOnLoad(this.gameObject);
     }
+	public void LoadScene(string name)
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadScene (name);
+	}
 
 }
