@@ -4,6 +4,6 @@ using System.Collections.Generic;
 
 public static class Events {
 	
-	public static System.Action BackClicked = delegate { };
+	public static System.Action<Vector3> OnMapClicked = delegate { };
 }
 
