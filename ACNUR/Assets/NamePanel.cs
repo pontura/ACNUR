@@ -14,7 +14,7 @@ public class NamePanel : MonoBehaviour {
 	}
 	public void Done()
 	{
-		//if(inputField.text.Length>0)
-			GetComponent<UI> ().Next ();
+		Data.Instance.userDataActive.username = inputField.text;
+		GetComponent<UI> ().Next ();
 	}
 }

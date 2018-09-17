@@ -32,6 +32,7 @@ public class PhotoCapture : MonoBehaviour
 		Data.Instance.photo.Apply();
 		GetComponent<UI> ().Next ();
 		webCamTexture.Stop();
+		Data.Instance.userDataActive.texture = Data.Instance.photo;
 		//System.IO.File.WriteAllBytes(_SavePath + _CaptureCounter.ToString() + ".png", snap.EncodeToPNG());
 	}
 }
