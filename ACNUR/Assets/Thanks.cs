@@ -7,6 +7,7 @@ public class Thanks : MonoBehaviour {
 	public GameObject panel;
 
 	public void Init() {
+		Data.Instance.serverController.Save ();
 		panel.SetActive (true);
 	}
 

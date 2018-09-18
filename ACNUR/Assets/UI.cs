@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class UI : MonoBehaviour {
 
+	public GameObject app;
+	public GameObject fullScreenApp;
+
 	public PhotoCapture photoPanel;
 	public NamePanel namePanel;
 	public PlaceIt placeItPanel;
@@ -12,7 +15,16 @@ public class UI : MonoBehaviour {
 	public MapController mapController;
 
 	int id;
+	void Awake()
+	{
+		app.SetActive (false);
+		fullScreenApp.SetActive (false);
 
+		if (Data.Instance.build == Data.builds.APP)
+			app.SetActive (true);
+		else
+			fullScreenApp.SetActive (true);
+	}
 	void Start()
 	{
 		Events.OnMapClicked += OnMapClicked;
@@ -70,8 +82,8 @@ public class UI : MonoBehaviour {
 			mapController.AddUser (Data.Instance.userDataActive);
 			break;
 		case 4:
-			chooseDestPanel.Done ();
 			Data.Instance.userDataActive.coordsDestino = pos;
+			chooseDestPanel.Done ();
 			mapController.Reset ();
 			mapController.AddUser (Data.Instance.userDataActive);
 			break;

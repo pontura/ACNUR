@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4521676219782436}
   - component: {fileID: 114066436768003948}
+  - component: {fileID: 114966215109292344}
+  - component: {fileID: 114098739001995704}
   m_Layer: 0
   m_Name: Data
   m_TagString: Untagged
@@ -51,4 +53,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d76d5cbf3bb174badbdda1e868e7b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  build: 0
+  DEBUG: 0
+  URL: http://localhost/ACNUR/
+  photo: {fileID: 0}
+  userDataActive:
+    username: 
+    coordsOrigen: {x: 0, y: 0}
+    coordsDestino: {x: 0, y: 0}
+    texture: {fileID: 0}
+  serverController: {fileID: 114966215109292344}
   currentLevel: 
+--- !u!114 &114098739001995704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026517708244526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e58bf677a619d41a04ab5eb21de799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsLoaded: []
+--- !u!114 &114966215109292344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026517708244526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8008fd29c84594a45bc686f7e4530635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

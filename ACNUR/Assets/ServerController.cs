@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ServerController : MonoBehaviour {
 
-	string URL = "http://localhost/ACNUR/";
 
 	public void Save()
 	{
@@ -16,20 +15,21 @@ public class ServerController : MonoBehaviour {
 		int height = Screen.height;
 		Texture2D tex = Data.Instance.photo;
 
-		// Encode texture into PNG
 		byte[] bytes = tex.EncodeToPNG();
 		Object.Destroy(tex);
 
-		string file_Name = Random.Range(0,1000).ToString() + System.DateTime.Now.Hour + "" + System.DateTime.Now.Minute + "" + System.DateTime.Now.Second + "" + System.DateTime.Now.Millisecond + ".png";
-		//var fileName = Application.dataPath + "/" + file_Name;
+		string file_Name = 
+			Data.Instance.userDataActive.username + "=" + 
+			(int)(Data.Instance.userDataActive.coordsOrigen.x*1000000) + "=" + 
+			(int)(Data.Instance.userDataActive.coordsOrigen.y*1000000) + "=" + 
+			(int)(Data.Instance.userDataActive.coordsDestino.x*1000000) + "=" + 
+			(int)(Data.Instance.userDataActive.coordsDestino.y*1000000)+ ".png";
 
-		//File.WriteAllBytes(fileName, bytes);
 
-		// Create a Web Form
 		WWWForm form = new WWWForm();
 		form.AddField("imageName", file_Name);
 		form.AddBinaryData("fileToUpload", bytes);
-		WWW w = new WWW(URL + "upload.php", form);
+		WWW w = new WWW(Data.Instance.URL + "upload.php", form);
 		yield return w;
 
 		if (w.error != null)
@@ -38,7 +38,7 @@ public class ServerController : MonoBehaviour {
 		}
 		else
 		{
-			Debug.Log("Finished Uploading Screenshot to " + URL);
+			Debug.Log("Finished Uploading Screenshot to " + Data.Instance.URL);
 		}
 	}
 }

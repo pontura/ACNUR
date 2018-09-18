@@ -5,10 +5,19 @@ using System;
 
 public class Data : MonoBehaviour
 {
+	public builds build;
+	public enum builds
+	{
+		APP,
+		FULL_SCREEN_MAP
+	}
+	public bool DEBUG;
+	public string URL = "http://localhost/ACNUR/";
     const string PREFAB_PATH = "Data";    
     static Data mInstance = null;
 	public Texture2D photo;
 	public UserData userDataActive;
+	public ServerController serverController;
 
     public static Data Instance
     {
