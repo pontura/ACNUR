@@ -10,7 +10,6 @@ public class Thanks : MonoBehaviour {
 		Data.Instance.serverController.Save ();
 		panel.SetActive (true);
 	}
-
 	public void Done()
 	{
 		GetComponent<UI> ().Reset ();

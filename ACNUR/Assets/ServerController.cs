@@ -16,7 +16,7 @@ public class ServerController : MonoBehaviour {
 		Texture2D tex = Data.Instance.photo;
 
 		byte[] bytes = tex.EncodeToPNG();
-		Object.Destroy(tex);
+		//Object.Destroy(tex);
 
 		string file_Name = 
 			Data.Instance.userDataActive.username + "=" + 
