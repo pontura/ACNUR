@@ -8,6 +8,7 @@ public class UI : MonoBehaviour {
 	public GameObject fullScreenApp;
 
 	public GameObject background;
+	public Splash splash;
 	public PhotoCapture photoPanel;
 	public NamePanel namePanel;
 	public PlaceIt placeItPanel;
@@ -36,6 +37,7 @@ public class UI : MonoBehaviour {
 	}
 	void ResetPanels()
 	{
+		splash.panel.SetActive (false);
 		chooseDestPanel.panel.SetActive (false);
 		namePanel.panel.SetActive (false);
 		photoPanel.panel.SetActive (false);
@@ -50,15 +52,20 @@ public class UI : MonoBehaviour {
 		Next ();
 	}
 	public void Next()
-	{
-		id++;
+	{		
 		OpenPanel (id);
+		id++;
 	}
 	public void OpenPanel(int id)
 	{
 		ResetPanels ();
 
 		switch (id) {
+		case 0:
+			background.SetActive (true);
+			splash.Init ();
+			SetText(1);
+			break;
 		case 1:
 			background.SetActive (true);
 			namePanel.Init ();
@@ -88,11 +95,11 @@ public class UI : MonoBehaviour {
 	}
 	public void SetText(int num)
 	{
-		if(num==0)
-			contador.SetActive (false);
-		else
-			contador.SetActive (true);
-		field.text = num + "/4";
+		// if(num==0)
+		// 	contador.SetActive (false);
+		// else
+		// 	contador.SetActive (true);
+		//field.text = num + "/4";
 	}
 	void OnMapClicked(Vector3 pos)
 	{

@@ -10,11 +10,24 @@ public class PhotoCapture : MonoBehaviour
 
 	WebCamTexture webCamTexture;
 	public RawImage image; 
+	public Text countdownField; 
 
 	public void Init() {
 		panel.SetActive (true);
 		webCamTexture = new WebCamTexture();
 		webCamTexture.Play();
+	}
+	int num = 3;
+	void Loop()
+	{
+		countdownField.text = num.ToString();
+		if (num==1)
+		{
+			 Done();
+			 return;
+		}
+		Invoke("Loop", 1);
+		num--;
 	}
 
 	void Update()
