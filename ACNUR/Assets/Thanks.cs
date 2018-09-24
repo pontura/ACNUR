@@ -9,6 +9,7 @@ public class Thanks : MonoBehaviour {
 	public void Init() {
 		Data.Instance.serverController.Save ();
 		panel.SetActive (true);
+		Invoke("Done", 6);
 	}
 	public void Done()
 	{

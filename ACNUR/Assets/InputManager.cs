@@ -5,12 +5,10 @@ using UnityEngine;
 public class InputManager : MonoBehaviour {
 	
 	public Camera cam;
+	public Vector2 pos;
 
 	void Update () {
-		if (Input.GetMouseButtonDown (0)) {				
-			Vector3 v = cam.ScreenToWorldPoint(Input.mousePosition);
-			v.z = -1;
-			Events.OnMapClicked(v);
-		}
+		if(Input.GetMouseButton((0)))
+			pos = cam.ScreenToWorldPoint(Input.mousePosition);
 	}
 }

@@ -14,7 +14,8 @@ public class PhotoCapture : MonoBehaviour
 
 	public void Init() {
 		panel.SetActive (true);
-		webCamTexture = new WebCamTexture();
+		int totalDevices = WebCamTexture.devices.Length;
+		webCamTexture = new WebCamTexture(WebCamTexture.devices[totalDevices-1].name);
 		webCamTexture.Play();
 	}
 	int num = 3;
@@ -41,11 +42,11 @@ public class PhotoCapture : MonoBehaviour
 	public void Done()
 	{
 		Data.Instance.photo = new Texture2D(webCamTexture.width, webCamTexture.height);
-		Data.Instance.photo.SetPixels(webCamTexture.GetPixels());
-		Data.Instance.photo.Apply();
-		GetComponent<UI> ().Next ();
-		webCamTexture.Stop();
 		Data.Instance.userDataActive.texture = Data.Instance.photo;
+		Data.Instance.photo.SetPixels(webCamTexture.GetPixels());
+		Data.Instance.photo.Apply();		
+		webCamTexture.Stop();		
+		GetComponent<UI> ().Next ();
 		//System.IO.File.WriteAllBytes(_SavePath + _CaptureCounter.ToString() + ".png", snap.EncodeToPNG());
 	}
 }

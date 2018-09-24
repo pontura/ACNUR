@@ -14,8 +14,8 @@ public class MapSlot : MonoBehaviour {
 	{
 		initialScale = transform.localScale;
 		this.userData = userData;
-
-		spriteRenderer.sprite = Sprite.Create(userData.texture, new Rect(0.0f, 0.0f, userData.texture.width, userData.texture.height), new Vector2(0.5f, 0.5f), 1000.0f);
+		print(userData.texture.width + " " + 	 userData.texture.height);
+		spriteRenderer.sprite = Sprite.Create(userData.texture, new Rect(0.0f, 0.0f, userData.texture.width-1, userData.texture.height-1), new Vector2(0.5f, 0.5f), 1000.0f);
 
 		if (userData.coordsDestino != Vector2.zero) {
 			timer = Vector2.Distance (userData.coordsOrigen, userData.coordsDestino);

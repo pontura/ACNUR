@@ -12,7 +12,7 @@ public class Data : MonoBehaviour
 		FULL_SCREEN_MAP
 	}
 	public bool DEBUG;
-	public string URL = "http://localhost/ACNUR/";
+	public string URL = "http://192.168.1.89/ACNUR/";
     const string PREFAB_PATH = "Data";    
     static Data mInstance = null;
 	public Texture2D photo;
@@ -47,7 +47,7 @@ public class Data : MonoBehaviour
             mInstance = this;
         else
         {
-            Destroy(this.gameObject);
+           // Destroy(this.gameObject);
             return;
         }
        

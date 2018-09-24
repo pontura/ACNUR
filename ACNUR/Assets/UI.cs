@@ -31,7 +31,7 @@ public class UI : MonoBehaviour {
 	}
 	void Start()
 	{
-		Events.OnMapClicked += OnMapClicked;
+		
 		ResetPanels ();
 		Next ();
 	}
@@ -47,12 +47,14 @@ public class UI : MonoBehaviour {
 	public void Reset()
 	{
 		mapController.Reset ();
-		Data.Instance.Reset ();
-		id = 0;
+		Data.Instance.Reset ();	
+		id = 0;	
 		Next ();
+		
 	}
 	public void Next()
-	{		
+	{	
+		print("Next " + id);	
 		OpenPanel (id);
 		id++;
 	}
@@ -87,7 +89,7 @@ public class UI : MonoBehaviour {
 			SetText(4);
 			break;
 		case 5:
-			background.SetActive (false);
+			background.SetActive (true);
 			thanksPanel.Init ();
 			SetText(0);
 			break;
@@ -101,20 +103,5 @@ public class UI : MonoBehaviour {
 		// 	contador.SetActive (true);
 		//field.text = num + "/4";
 	}
-	void OnMapClicked(Vector3 pos)
-	{
-		switch (id) {
-		case 3:			
-			placeItPanel.Done ();
-			Data.Instance.userDataActive.coordsOrigen = pos;
-			mapController.AddUser (Data.Instance.userDataActive);
-			break;
-		case 4:			
-			Data.Instance.userDataActive.coordsDestino = pos;
-			mapController.Reset ();
-			mapController.AddUser (Data.Instance.userDataActive);
-			chooseDestPanel.Done ();
-			break;
-		}
-	}
+	
 }

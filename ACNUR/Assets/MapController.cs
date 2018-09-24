@@ -8,20 +8,21 @@ public class MapController : MonoBehaviour {
 	public Transform container;
 	public List<MapSlot> all;
 
-	public void AddUser(UserData userData)
+	public MapSlot AddUser(UserData userData)
 	{
 		MapSlot newMapSlot = Instantiate (mapSlot);
 		newMapSlot.transform.SetParent (container);
 		newMapSlot.Init (userData);
 		newMapSlot.transform.localPosition = userData.coordsOrigen;
 		all.Add (newMapSlot);
+		return newMapSlot;
 	}
 	public void Reset()
 	{
 		int i = all.Count;
-		while (i > 0) {
-			Destroy (all [i-1].gameObject);
+		while (i > 0) {			
 			i--;
+			Destroy (all [i].gameObject);
 		}
 		all.Clear ();
 	}

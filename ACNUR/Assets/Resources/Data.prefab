@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114066436768003948}
   - component: {fileID: 114966215109292344}
   - component: {fileID: 114098739001995704}
+  - component: {fileID: 114018704050044610}
   m_Layer: 0
   m_Name: Data
   m_TagString: Untagged
@@ -42,6 +43,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114018704050044610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026517708244526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90789a0def3fb441afd3cfb47789c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!114 &114066436768003948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,8 +67,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   build: 0
-  DEBUG: 0
-  URL: http://localhost/ACNUR/
+  DEBUG: 1
+  URL: http://192.168.1.89/ACNUR/
   photo: {fileID: 0}
   userDataActive:
     username: 
