@@ -68,27 +68,27 @@ public class UI : MonoBehaviour {
 			splash.Init ();
 			SetText(1);
 			break;
+	//	case 1:
+		//	background.SetActive (true);
+		//	namePanel.Init ();
+		//	SetText(1);
+		//	break;
 		case 1:
-			background.SetActive (true);
-			namePanel.Init ();
-			SetText(1);
-			break;
-		case 2:
 			background.SetActive (true);
 			photoPanel.Init ();
 			SetText(2);
 			break;
-		case 3:
+		case 2:
 			background.SetActive (false);
 			placeItPanel.Init ();
 			SetText(3);
 			break;
-		case 4:
+		case 3:
 			background.SetActive (false);
 			chooseDestPanel.Init ();
 			SetText(4);
 			break;
-		case 5:
+		case 4:
 			background.SetActive (true);
 			thanksPanel.Init ();
 			SetText(0);

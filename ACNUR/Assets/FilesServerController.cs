@@ -17,16 +17,9 @@ public class FilesServerController : MonoBehaviour {
 
 	void Start()
 	{
-		LoadSettings();
+	//	LoadSettings();
 		if(Data.Instance.build == Data.builds.FULL_SCREEN_MAP)
 			OnSettingsLoaded();
-	}
-	
-	void LoadSettings()
-	{
-	//	string Path = Application.streamingAssetsPath + "/settings.json";
-	//	string jsonString = File.ReadAllText (Path);
-	//	dataSettings = JsonUtility.FromJson<DataSettings> (jsonString);
 	}
 	void OnSettingsLoaded()
 	{	

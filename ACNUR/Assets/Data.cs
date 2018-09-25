@@ -18,6 +18,7 @@ public class Data : MonoBehaviour
 	public Texture2D photo;
 	public UserData userDataActive;
 	public ServerController serverController;
+    public ConfictData conflictData;
 
     public static Data Instance
     {

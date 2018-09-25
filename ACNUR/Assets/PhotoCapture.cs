@@ -17,12 +17,22 @@ public class PhotoCapture : MonoBehaviour
 		int totalDevices = WebCamTexture.devices.Length;
 		webCamTexture = new WebCamTexture(WebCamTexture.devices[totalDevices-1].name);
 		webCamTexture.Play();
+		countdownField.text = "";
+		clicked = false;
+	}
+	bool clicked;
+	public void Clicked()
+	{
+		if(clicked)
+		return;
+		clicked = true;
+		Loop();
 	}
 	int num = 3;
 	void Loop()
 	{
 		countdownField.text = num.ToString();
-		if (num==1)
+		if (num==0)
 		{
 			 Done();
 			 return;

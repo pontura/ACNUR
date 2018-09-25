@@ -49,6 +49,7 @@ public class ChooseDest : MonoBehaviour {
 	}
 	void DelayToEnd()
 	{
+		GetComponent<ZonasManager>().SetArea();
 		buttonDone.SetActive(true);
 	}
 	void Update()
