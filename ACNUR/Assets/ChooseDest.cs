@@ -38,6 +38,9 @@ public class ChooseDest : MonoBehaviour {
 		buttonDone.SetActive(false);
 		if(ended)
 		{
+			ended = false;
+			dragging = false;
+			GetComponent<ZonasManager>().ResetAll();
 			GetComponent<UI> ().Next ();
 			return;
 		}
@@ -49,8 +52,8 @@ public class ChooseDest : MonoBehaviour {
 	}
 	void DelayToEnd()
 	{
-		GetComponent<ZonasManager>().SetArea();
 		buttonDone.SetActive(true);
+		GetComponent<ZonasManager>().SetArea();		
 	}
 	void Update()
 	{

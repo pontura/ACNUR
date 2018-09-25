@@ -56,7 +56,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   build: 0
   DEBUG: 1
-  URL: http://192.168.1.89/ACNUR/
+  URL: http://192.168.0.50/ACNUR/
   photo: {fileID: 0}
   userDataActive:
     username: 
@@ -89,10 +89,128 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ecc3dc566e4254eb9ce1f67c27c705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reload: 1
   jsonContent:
-    cifras: []
-    porcentajes: []
-    parrafos: []
+    cifras:
+    - title: 65,8 MILLONES
+      content: de personas...
+    - title: 3,1 MILLONES
+      content: de solicitantes de asilo
+    porcentajes:
+    - title: 57%
+      content: "de los refugiados del mundo vienen de los siguientes 3 pa\xEDses:/nSud\xE1n
+        del sur (2,4M)/nAfganist\xE1n (2,6M)/nSiria (6,3M)"
+    - title: 85%
+      content: "de las personas desplazadas se encuentra en pa\xEDses en desarrollo"
+    parrafos:
+    - title: "Prop\xF3sito ACNUR"
+      content:
+      - "Garantizar que todas las personas tengan derecho a buscar asilo y encontrar
+        un refugio seguro en otro Estado, con la opci\xF3n de regresar eventualmente
+        a su hogar, integrarse o reasentarse."
+      - "Durante los desplazamientos, ACNUR da asistencia de emergencia cr\xEDtica,
+        como agua potable, saneamiento y atenci\xF3n m\xE9dica, albergue, mantas,
+        art\xEDculos para el hogar y, a veces, alimentos."
+      - "Asimismo, ACNUR otorga transporte y asistencia para las personas que regresan
+        a sus hogares, as\xED como proyectos de generaci\xF3n de ingresos para quienes
+        se reasientan."
+    - title: "\xBFQu\xE9 es el desplazamiento forzado?"
+      content:
+      - "Es aquel que sufre una persona cuando se ve forzada a desplazarse dentro
+        o fuera de las fronteras de su pa\xEDs. Las razones est\xE1n vinculadas a
+        su subsistencia y seguridad."
+      - "El desplazamiento puede afectar a cualquier persona. Cientos de miles de
+        personas se ven obligadas a huir de sus hogares todos los d\xEDas: j\xF3venes
+        y adultos, enfermos y saludables, hijos e hijas."
+      - El trabajo de ACNUR es proteger y salvaguardar los derechos de las personas.
+        Ayuda a millones de personas en el mundo a reconstruir sus vidas y restaurar
+        comunidades destruidas.
+    profiles:
+    - image: refug-YUSRA
+      nombre: YUSRA MARDINI
+      desc: "Cuando hu\xEDa de Damasco, rumbo a Grecia, el motor del bote fall\xF3
+        y junto a otras personas nad\xF3 e impuls\xF3 la embarcaci\xF3n. Salv\xF3
+        a 20 tripulantes. Se refugi\xF3 en Alemania, donde retom\xF3 su entrenamiento
+        como nadadora."
+      origen: Siria
+      acogida: Alemania
+      Deporte: "Nataci\xF3n (100 metros estilo libre)"
+    - image: refug-RAMI
+      nombre: RAMI ANIS
+      desc: "Comenz\xF3 a entrenar como atleta competitivo en Siria, a los 14 a\xF1os.
+        Desde 2015 vive en B\xE9lgica, donde aprende el lenguaje y la cultura local."
+      origen: Siria
+      acogida: "B\xE9lgica"
+      Deporte: "Nataci\xF3n (100 metros estilo libre)"
+    - image: refug-YONAS
+      nombre: YONAS KINDE
+      desc: "Entrena desde adolescente. Escap\xF3 en 2012 hacia Europa, donde gan\xF3
+        varios t\xEDtulos como maratonista. Su objetivo es vivir con su hija y esposa
+        en Luxemburgo, quienes a\xFAn se encuentran en Etiop\xEDa."
+      origen: "Etiop\xEDa"
+      acogida: Luxemburgo
+      Deporte: "Atletismo (Marat\xF3n)."
+    zonas:
+    - id: 1
+      title: Irak
+      content: "M\xE1s de 2,1 millones de iraqu\xEDes se han visto obligados a huir
+        de sus hogares, solo con su ropa en la espalda, despu\xE9s de d\xE9cadas de
+        conflicto y violencia. Necesitan desesperadamente ayuda de emergencia."
+    - id: 2
+      title: "Rep\xFAblica Democr\xE1tica del Congo"
+      content: "Las nuevas olas de inestabilidad en la Rep\xFAblica Democr\xE1tica
+        del Congo han desplazado a m\xE1s de 1,7 millones de personas, mientras la
+        violencia destruye sus vidas y los medios de vida en el pa\xEDs."
+    - id: 3
+      title: "Sud\xE1n del Sur"
+      content: "Desde diciembre de 2013, se han sucedido brutales conflictos en Sud\xE1n
+        del Sur, cobrando miles de vidas y generando la expulsi\xF3n de casi 4 millones
+        de personas de sus hogares, desplazados dentro y fuera del pa\xEDs."
+    - id: 4
+      title: Rohingyas
+      content: "M\xE1s de 723.000 refugiadas rohingya huyeron a Bangladesh desde agosto
+        de 2017. Llegaron exhaustos, hambrientos y enfermos, necesitados de protecci\xF3n
+        internacional y asistencia humanitaria."
+    - id: 5
+      title: Europa
+      content: "La persecuci\xF3n, los conflictos y las violaciones de los derechos
+        humanos siguen obligando a las personas a huir de sus hogares y buscar seguridad
+        en Europa. M\xE1s de 80.000 personas han arriesgado sus vidas, enfrent\xE1ndose
+        a un viaje peligroso intentando llegar."
+    - id: 6
+      title: Nigeria
+      content: "La insurgencia de Boko Haram ha desplazado a m\xE1s de 2,5 millones
+        de personas. Los civiles en Nigeria siguen siendo afectados por graves violaciones
+        de los derechos humanos, la violencia generalizada por motivos sexuales y
+        de g\xE9nero, el reclutamiento forzado y los atentados suicidas."
+    - id: 7
+      title: Siria
+      content: "M\xE1s de 5,6 millones de personas han huido de Siria desde 2011,
+        buscando seguridad en otros pa\xEDses. Adem\xE1s, millones de personas est\xE1n
+        siendo desplazados dentro del pa\xEDs, a medida que la guerra continua."
+    - id: 8
+      title: Yemen
+      content: "En Yemen se est\xE1 desarrollando una cat\xE1strofe humanitaria que
+        ha obligado a millones de personas a huir de sus hogares para escapar del
+        devastador conflicto, enfrentando condiciones desesperadas, mientras buscan
+        seguridad, albergue y ayuda humanitaria."
+    - id: 9
+      title: Burundi
+      content: "M\xE1s de 396.000 personas huyeron de Burundi en b\xFAsqueda de seguridad
+        y refugio en pa\xEDses vecinos, a partir de los disturbios pol\xEDticos de
+        2015 despu\xE9s de que el presidente anunciara planes para su tercer mandato."
+    - id: 10
+      title: "Rep\xFAblica Centroafricana"
+      content: "La RCA, es uno de los pa\xEDses m\xE1s pobres del mundo. Desde 2017
+        se ve afectada por enfrentamientos violentos entre grupos armados, generando
+        m\xE1s de 582.000 refugiados en otros pa\xEDses y 687.398 desplazados dentro
+        del pa\xEDs."
+    - id: 11
+      title: Venezuela
+      content: "La situaci\xF3n pol\xEDtica-econ\xF3mica en Venezuela ha generado
+        el desplazamiento de los venezolanos fuera de su pa\xEDs. Durante 2018 ha
+        habido m\xE1s de 117.000 solicitudes de asilo, siendo el cuarto pa\xEDs con
+        m\xE1s solicitudes de asilo en el mundo."
 --- !u!114 &114966215109292344
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -9,10 +9,11 @@ public class Thanks : MonoBehaviour {
 	public void Init() {
 		Data.Instance.serverController.Save ();
 		panel.SetActive (true);
-		Invoke("Done", 6);
+		Invoke("Done", 12);
 	}
 	public void Done()
 	{
+		CancelInvoke();
 		GetComponent<UI> ().Reset ();
 	}
 }

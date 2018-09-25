@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class ZonasManager : MonoBehaviour {
 
+	public Camera cam;
 	public GameObject[] all;
-	public ConfictData conflictDataPanel;
+	public GameObject conflictDataPanel;
 	public Text title;
 	public Text content;
 	
 	void Start()
 	{
-		Reset();
+		ResetAll();
 	}
 	void Reset()
 	{
@@ -24,17 +25,26 @@ public class ZonasManager : MonoBehaviour {
 		Reset();
 		int id = Random.Range(0,all.Length);
 		if(Data.Instance.userDataActive.coordsDestino.x<0)
-			id = 9;
+			id = 10;
 		
 		all[id].SetActive(true);
 
-		ZonaContent zona= Data.Instance.conflictData.jsonContent.zonas[id];
-
 		conflictDataPanel.SetActive(true);
-		Vector3 pos = all[id].localPosition;
-		conflictDataPanel.transform.localPosition = pos;
+
+		Vector3 pos = all[id].transform.localPosition;
+		Vector3 screenPos = cam.WorldToScreenPoint(pos);
+		 screenPos.z = -6;
+		conflictDataPanel.transform.position = screenPos;
+
+		ConfictData.ZonaContent zona = Data.Instance.conflictData.jsonContent.zonas[id];		
 		title.text = zona.title;
-		content.text = zona.content; 
+		content.text = zona.content;	 	
+
+	}
+	public void ResetAll()
+	{
+		conflictDataPanel.SetActive(false);
+		Reset();
 	}
 
 }

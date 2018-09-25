@@ -5,6 +5,7 @@ using System.IO;
 
 public class ConfictData : MonoBehaviour {
 
+	public bool reload;
 	[System.Serializable]
 	public class ZonaContent
 	{
@@ -48,7 +49,11 @@ public class ConfictData : MonoBehaviour {
 
 	void Start()
 	{
-		LoadSettings();
+		
+		if(reload)
+		{
+			LoadSettings();
+		}
 		//if(Data.Instance.build == Data.builds.FULL_SCREEN_MAP)
 		//	OnSettingsLoaded();
 	}
