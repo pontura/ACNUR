@@ -11,15 +11,19 @@ public class ChooseDest : MonoBehaviour {
 	public bool isOn;
 	bool dragging;	
 	public GameObject title;
+	public GameObject subtitle;
 	public GameObject buttonDone;
 
 	public void Init() {
+		dragging = false;
+		isOn = false;
 		mapSlot = mapController.AddUser (Data.Instance.userDataActive);
 		mapSlot.transform.localPosition = new Vector3(1000,1000,0);
 		title.SetActive(true);
 		buttonDone.SetActive(false);	
+		subtitle.SetActive(false);	
 		panel.SetActive (true);
-		Invoke("Delayed", 0.1f);	
+		Invoke("Delayed", 0.2f);	
 	}
 	void Delayed()
 	{
@@ -53,7 +57,8 @@ public class ChooseDest : MonoBehaviour {
 	void DelayToEnd()
 	{
 		buttonDone.SetActive(true);
-		GetComponent<ZonasManager>().SetArea();		
+		GetComponent<ZonasManager>().SetArea();	
+		subtitle.SetActive(true);		
 	}
 	void Update()
 	{
@@ -68,6 +73,7 @@ public class ChooseDest : MonoBehaviour {
 			dragging = false;
 			buttonDone.SetActive(true);	
 			Data.Instance.userDataActive.coordsDestino = inputManager.pos;	
+			mapSlot.transform.localPosition = inputManager.pos;	
 		}
 		else if(dragging)
 			mapSlot.transform.localPosition = inputManager.pos;

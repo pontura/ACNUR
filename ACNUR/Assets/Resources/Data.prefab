@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d76d5cbf3bb174badbdda1e868e7b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  build: 0
+  build: 1
   DEBUG: 1
   URL: http://192.168.0.50/ACNUR/
   photo: {fileID: 0}
@@ -151,66 +151,65 @@ MonoBehaviour:
       acogida: Luxemburgo
       Deporte: "Atletismo (Marat\xF3n)."
     zonas:
-    - id: 1
+    - id: 0
       title: Irak
       content: "M\xE1s de 2,1 millones de iraqu\xEDes se han visto obligados a huir
-        de sus hogares, solo con su ropa en la espalda, despu\xE9s de d\xE9cadas de
-        conflicto y violencia. Necesitan desesperadamente ayuda de emergencia."
-    - id: 2
+        dentro de Irak, s\xF3lo con su ropa en la espalda, despu\xE9s de d\xE9cadas
+        de conflicto y violencia. Necesitan desesperadamente ayuda de emergencia."
+    - id: 1
       title: "Rep\xFAblica Democr\xE1tica del Congo"
       content: "Las nuevas olas de inestabilidad en la Rep\xFAblica Democr\xE1tica
         del Congo han desplazado a m\xE1s de 1,7 millones de personas, mientras la
         violencia destruye sus vidas y los medios de vida en el pa\xEDs."
-    - id: 3
+    - id: 2
       title: "Sud\xE1n del Sur"
       content: "Desde diciembre de 2013, se han sucedido brutales conflictos en Sud\xE1n
         del Sur, cobrando miles de vidas y generando la expulsi\xF3n de casi 4 millones
         de personas de sus hogares, desplazados dentro y fuera del pa\xEDs."
-    - id: 4
+    - id: 3
       title: Rohingyas
-      content: "M\xE1s de 723.000 refugiadas rohingya huyeron a Bangladesh desde agosto
-        de 2017. Llegaron exhaustos, hambrientos y enfermos, necesitados de protecci\xF3n
-        internacional y asistencia humanitaria."
-    - id: 5
+      content: "M\xE1s de 723.000 personas refugiadas rohingyas huyeron a Bangladesh
+        desde agosto de 2017. Llegaron exhaustos, hambrientos y enfermos, necesitados
+        de protecci\xF3n internacional y asistencia humanitaria."
+    - id: 4
       title: Europa
       content: "La persecuci\xF3n, los conflictos y las violaciones de los derechos
         humanos siguen obligando a las personas a huir de sus hogares y buscar seguridad
-        en Europa. M\xE1s de 80.000 personas han arriesgado sus vidas, enfrent\xE1ndose
+        en Europa. En 2018, m\xE1s de 80.000 personas han arriesgado sus vidas, enfrent\xE1ndose
         a un viaje peligroso intentando llegar."
-    - id: 6
+    - id: 5
       title: Nigeria
       content: "La insurgencia de Boko Haram ha desplazado a m\xE1s de 2,5 millones
         de personas. Los civiles en Nigeria siguen siendo afectados por graves violaciones
         de los derechos humanos, la violencia generalizada por motivos sexuales y
         de g\xE9nero, el reclutamiento forzado y los atentados suicidas."
-    - id: 7
+    - id: 6
       title: Siria
       content: "M\xE1s de 5,6 millones de personas han huido de Siria desde 2011,
         buscando seguridad en otros pa\xEDses. Adem\xE1s, millones de personas est\xE1n
-        siendo desplazados dentro del pa\xEDs, a medida que la guerra continua."
-    - id: 8
+        siendo desplazados dentro del pa\xEDs, a medida que la guerra contin\xFAa."
+    - id: 7
       title: Yemen
       content: "En Yemen se est\xE1 desarrollando una cat\xE1strofe humanitaria que
         ha obligado a millones de personas a huir de sus hogares para escapar del
         devastador conflicto, enfrentando condiciones desesperadas, mientras buscan
         seguridad, albergue y ayuda humanitaria."
-    - id: 9
+    - id: 8
       title: Burundi
       content: "M\xE1s de 396.000 personas huyeron de Burundi en b\xFAsqueda de seguridad
-        y refugio en pa\xEDses vecinos, a partir de los disturbios pol\xEDticos de
-        2015 despu\xE9s de que el presidente anunciara planes para su tercer mandato."
-    - id: 10
+        en pa\xEDses vecinos, a partir de los disturbios pol\xEDticos de 2015 despu\xE9s
+        de que el presidente anunciara planes para su tercer mandato."
+    - id: 9
       title: "Rep\xFAblica Centroafricana"
       content: "La RCA, es uno de los pa\xEDses m\xE1s pobres del mundo. Desde 2017
-        se ve afectada por enfrentamientos violentos entre grupos armados, generando
-        m\xE1s de 582.000 refugiados en otros pa\xEDses y 687.398 desplazados dentro
-        del pa\xEDs."
-    - id: 11
+        se ve afectada por enfrentamientos violentos entre grupos armados que han
+        generado m\xE1s de 582.000 refugiados en otros pa\xEDses y 687.398 desplazados
+        dentro del pa\xEDs."
+    - id: 10
       title: Venezuela
       content: "La situaci\xF3n pol\xEDtica-econ\xF3mica en Venezuela ha generado
-        el desplazamiento de los venezolanos fuera de su pa\xEDs. Durante 2018 ha
-        habido m\xE1s de 117.000 solicitudes de asilo, siendo el cuarto pa\xEDs con
-        m\xE1s solicitudes de asilo en el mundo."
+        el desplazamiento de los venezolanos fuera de su pa\xEDs. Desde 2014 han habido
+        m\xE1s de 330.000 solicitudes de asilo."
 --- !u!114 &114966215109292344
 MonoBehaviour:
   m_ObjectHideFlags: 1

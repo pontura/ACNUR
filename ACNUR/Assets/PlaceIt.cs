@@ -14,13 +14,15 @@ public class PlaceIt : MonoBehaviour {
 	public bool isOn;
 	bool dragging;
 
-	public void Init() {		
+	public void Init() {	
+		dragging = false;
+		isOn = false;	
 		mapSlot = mapController.AddUser (Data.Instance.userDataActive);
 		mapSlot.transform.localPosition = new Vector3(1000,1000,0);
 		button.SetActive(false);
 		panel.SetActive (true);
 		rawImage.texture = Data.Instance.photo;
-		Invoke("Delayed", 0.1f);		
+		Invoke("Delayed", 0.2f);		
 	}
 	void Delayed()
 	{
@@ -42,6 +44,7 @@ public class PlaceIt : MonoBehaviour {
 			dragging = false;
 			button.SetActive(true);
 			Data.Instance.userDataActive.coordsOrigen = inputManager.pos;	
+			mapSlot.transform.localPosition = inputManager.pos;	
 		} else if(dragging)
 		{
 			mapSlot.transform.localPosition = inputManager.pos;			

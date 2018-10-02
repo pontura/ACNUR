@@ -6,18 +6,9 @@ using UnityEngine;
 public class FilesServerController : MonoBehaviour {
 
 	public List<string> itemsLoaded;
-	public DataSettings dataSettings;	
-
-
-	[System.Serializable]
-	public class DataSettings
-	{
-	//	public string server = "http://192.168.1.89/";
-	}
 
 	void Start()
 	{
-	//	LoadSettings();
 		if(Data.Instance.build == Data.builds.FULL_SCREEN_MAP)
 			OnSettingsLoaded();
 	}
@@ -28,7 +19,7 @@ public class FilesServerController : MonoBehaviour {
 	void Loop()
 	{
 		GetAllFiles ();
-		//Invoke ("Loop", 2);
+		Invoke ("Loop", 2);
 	}
 	void GetAllFiles()
 	{

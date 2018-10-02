@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TextsManager : MonoBehaviour {
 
+	public GameObject anim;
 	public Image profileImage;
 	public GameObject cifrasPanel;
 	public GameObject percentPanel;
@@ -41,6 +42,7 @@ public class TextsManager : MonoBehaviour {
 	}
 	void GetNext()
 	{
+		anim.SetActive(true);
 		ResetAll();
 		int r = Random.Range(0,100);
 
@@ -57,7 +59,13 @@ public class TextsManager : MonoBehaviour {
 		else
 			UseProfile();
 
-		Invoke("GetNext", 1);
+		Invoke("Loop", 1);
+	}
+	void Loop()
+	{
+		if(parrafoID==0 && profileID == 0)
+		anim.SetActive(false);
+		Invoke("GetNext", 9);
 	}
 	void UseCifra()
 	{
@@ -128,7 +136,7 @@ public class TextsManager : MonoBehaviour {
 		if(profileID==0)
 			profile_Content.text = profileData.desc;
 		else
-			profile_Content.text = "País de origen: " + profileData.origen + "/nPaís de acogida: " +   profileData.acogida + "/nDeporte: " +  profileData.Deporte;
+			profile_Content.text = "País de origen: " + profileData.origen + "\nPaís de acogida: " +   profileData.acogida + "\nDeporte: " +  profileData.Deporte;
 		
 
 		profileID++;

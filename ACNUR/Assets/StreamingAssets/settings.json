@@ -3,22 +3,34 @@
 [
 	{
 	"title":"65,8 MILLONES",
-	"content": "de personas..."
+	"content": "de personas desplazadas a la fuerza en todo el mundo."
 	},
 	{
 	"title":"3,1 MILLONES",
-	"content": "de solicitantes de asilo"
+	"content": "de solicitantes de asilo."
+	},
+	{
+	"title":"25,4 MILLONES",
+	"content": "de personas refugiadas en todo el mundo."
+	},
+	{
+	"title":"40 MILLONES",
+	"content": "de personas desplazadas internas."
+	},
+	{
+	"title":"10 MILLONES",
+	"content": "de personas apátridas."
 	}
 ],
 "porcentajes":
 [
 	{
 	"title":"57%",
-	"content": "de los refugiados del mundo vienen de los siguientes 3 países:/nSudán del sur (2,4M)/nAfganistán (2,6M)/nSiria (6,3M)"
+	"content": "de los refugiados del mundo vienen de los siguientes 3 países:\nSudán del sur (2,4M)\nAfganistán (2,6M)\nSiria (6,3M)"
 	},
 	{
 	"title":"85%",
-	"content": "de las personas desplazadas se encuentra en países en desarrollo"
+	"content": "de las personas desplazadas se encuentra en países en desarrollo."
 	}
 ],
 "parrafos":
@@ -39,6 +51,54 @@
 			"Es aquel que sufre una persona cuando se ve forzada a desplazarse dentro o fuera de las fronteras de su país. Las razones están vinculadas a su subsistencia y seguridad.",
 			"El desplazamiento puede afectar a cualquier persona. Cientos de miles de personas se ven obligadas a huir de sus hogares todos los días: jóvenes y adultos, enfermos y saludables, hijos e hijas.",
 			"El trabajo de ACNUR es proteger y salvaguardar los derechos de las personas. Ayuda a millones de personas en el mundo a reconstruir sus vidas y restaurar comunidades destruidas."
+		]
+	},
+	{
+		"title":"¿Quién es una persona refugiada?",
+		"content": 
+		[
+			"Las personas refugiadas son las que huyen del conflicto y la persecución. Las amparan el derecho internacional, y no deben ser expulsadas o retornadas a situaciones en las que sus vidas corran peligro."
+		]
+	},
+	{
+		"title":"¿Puede una persona ser desplazada interna?",
+		"content": 
+		[
+			"Las personas desplazadas internas no han cruzado las fronteras de su país para buscar seguridad. A diferencia de los refugiados, su huida se da dentro de su propio país.",
+			"Los desplazados internos permanecen bajo la protección de su gobierno, aun en los casos en que el mismo gobierno sea una de las causas de su partida."
+		]
+	},
+	{
+		"title":"¿Qué significa que una persona sea apátrida?",
+		"content": 
+		[
+			"Una persona apátrida es una persona que no es reconocida por ningún país como ciudadano conforme a su legislación. Algunas personas nacen sin estado, pero otras se convierten en apátridas.",
+			"La apatridia ocurre por discriminación contra grupos étnicos o religiosos, motivos de género, la aparición de nuevos Estados y las transferencias de territorio entre los Estados existentes y vacíos en las leyes de nacionalidad. ",
+			"Cualquiera que sea su causa, la apatridia tiene graves consecuencias para las personas en casi todos los países y regiones del mundo."
+		]
+	},
+	{
+		"title":"¿Qué es un solicitante de asilo? ",
+		"content": 
+		[
+			"Es quién solicita el reconocimiento de la condición de refugiado y cuya solicitud todavía no ha sido evaluada. Alrededor de 1 millón de personas piden asilo cada año."
+		]
+	},
+	{
+		"title":"¿Cómo se protege a las personas?",
+		"content": 
+		[
+			"Las personas refugiadas que huyen de la guerra o la persecución pueden ser muy vulnerables. No cuentan con la protección de su propio estado y a veces, su propio gobierno es quien los está persiguiendo.",
+			"Precisan de protección y ayuda de otros países; de lo contrario, pueden ser condenados a una situación en donde sus derechos básicos, seguridad e incluso sus vidas corran peligro."
+		]
+	},
+	{
+		"title":"¿Cómo se puede ayudar?",
+		"content": 
+		[
+			"Apoyando el trabajo de ACNUR con una donación.",
+			"Involucrándote. Contándole al mundo que vos también estás #ConLosRefugiados y firmando la petición (www.conlosrefugiados.org).",
+			"Informándote, difundiendo, siguiendo a ACNUR en sus redes sociales y visitando su web."
 		]
 	}
 ],
@@ -73,59 +133,59 @@
 [
 
 	{
-	"id":1,
+	"id":0,
 	"title":"Irak",
-	"content":"Más de 2,1 millones de iraquíes se han visto obligados a huir de sus hogares, solo con su ropa en la espalda, después de décadas de conflicto y violencia. Necesitan desesperadamente ayuda de emergencia."
+	"content":"Más de 2,1 millones de iraquíes se han visto obligados a huir dentro de Irak, sólo con su ropa en la espalda, después de décadas de conflicto y violencia. Necesitan desesperadamente ayuda de emergencia."
 	},
 	{
-	"id":2,
+	"id":1,
 	"title":"República Democrática del Congo",
 	"content":"Las nuevas olas de inestabilidad en la República Democrática del Congo han desplazado a más de 1,7 millones de personas, mientras la violencia destruye sus vidas y los medios de vida en el país."
 	},
 	{
-	"id":3,
+	"id":2,
 	"title":"Sudán del Sur",
 	"content":"Desde diciembre de 2013, se han sucedido brutales conflictos en Sudán del Sur, cobrando miles de vidas y generando la expulsión de casi 4 millones de personas de sus hogares, desplazados dentro y fuera del país."
 	},
 	{
-	"id":4,
+	"id":3,
 	"title":"Rohingyas",
-	"content":"Más de 723.000 refugiadas rohingya huyeron a Bangladesh desde agosto de 2017. Llegaron exhaustos, hambrientos y enfermos, necesitados de protección internacional y asistencia humanitaria."
+	"content":"Más de 723.000 personas refugiadas rohingyas huyeron a Bangladesh desde agosto de 2017. Llegaron exhaustos, hambrientos y enfermos, necesitados de protección internacional y asistencia humanitaria."
+	},
+	{
+	"id":4,
+	"title":"Europa",
+	"content":"La persecución, los conflictos y las violaciones de los derechos humanos siguen obligando a las personas a huir de sus hogares y buscar seguridad en Europa. En 2018, más de 80.000 personas han arriesgado sus vidas, enfrentándose a un viaje peligroso intentando llegar."
 	},
 	{
 	"id":5,
-	"title":"Europa",
-	"content":"La persecución, los conflictos y las violaciones de los derechos humanos siguen obligando a las personas a huir de sus hogares y buscar seguridad en Europa. Más de 80.000 personas han arriesgado sus vidas, enfrentándose a un viaje peligroso intentando llegar."
-	},
-	{
-	"id":6,
 	"title":"Nigeria",
 	"content":"La insurgencia de Boko Haram ha desplazado a más de 2,5 millones de personas. Los civiles en Nigeria siguen siendo afectados por graves violaciones de los derechos humanos, la violencia generalizada por motivos sexuales y de género, el reclutamiento forzado y los atentados suicidas."
 	},
 	{
-	"id":7,
+	"id":6,
 	"title":"Siria",
-	"content":"Más de 5,6 millones de personas han huido de Siria desde 2011, buscando seguridad en otros países. Además, millones de personas están siendo desplazados dentro del país, a medida que la guerra continua."
+	"content":"Más de 5,6 millones de personas han huido de Siria desde 2011, buscando seguridad en otros países. Además, millones de personas están siendo desplazados dentro del país, a medida que la guerra continúa."
 	},
 	{
-	"id":8,
+	"id":7,
 	"title":"Yemen",
 	"content":"En Yemen se está desarrollando una catástrofe humanitaria que ha obligado a millones de personas a huir de sus hogares para escapar del devastador conflicto, enfrentando condiciones desesperadas, mientras buscan seguridad, albergue y ayuda humanitaria."
 	},
 	{
-	"id":9,
+	"id":8,
 	"title":"Burundi",
-	"content":"Más de 396.000 personas huyeron de Burundi en búsqueda de seguridad y refugio en países vecinos, a partir de los disturbios políticos de 2015 después de que el presidente anunciara planes para su tercer mandato."
+	"content":"Más de 396.000 personas huyeron de Burundi en búsqueda de seguridad en países vecinos, a partir de los disturbios políticos de 2015 después de que el presidente anunciara planes para su tercer mandato."
+	},
+	{
+	"id":9,
+	"title":"República Centroafricana",
+	"content":"La RCA, es uno de los países más pobres del mundo. Desde 2017 se ve afectada por enfrentamientos violentos entre grupos armados que han generado más de 582.000 refugiados en otros países y 687.398 desplazados dentro del país."
 	},
 	{
 	"id":10,
-	"title":"República Centroafricana",
-	"content":"La RCA, es uno de los países más pobres del mundo. Desde 2017 se ve afectada por enfrentamientos violentos entre grupos armados, generando más de 582.000 refugiados en otros países y 687.398 desplazados dentro del país."
-	},
-	{
-	"id":11,
 	"title":"Venezuela",
-	"content":"La situación política-económica en Venezuela ha generado el desplazamiento de los venezolanos fuera de su país. Durante 2018 ha habido más de 117.000 solicitudes de asilo, siendo el cuarto país con más solicitudes de asilo en el mundo."
+	"content":"La situación política-económica en Venezuela ha generado el desplazamiento de los venezolanos fuera de su país. Desde 2014 han habido más de 330.000 solicitudes de asilo."
 	}
 
 ]
